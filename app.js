@@ -14,7 +14,7 @@ function getWeather() {
   let cityElement = document.getElementById("city");
   let city = cityElement.value;
   let url =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=metric&APPID=5d066958a60d315387d9492393935c19";
   fetch(url)
@@ -28,7 +28,7 @@ function getWeather() {
       //Icon weather
       let img = document.querySelector(".icon");
       let weatherIcon = data.weather[0].icon;
-      weatherIcon = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+      weatherIcon = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
       img.setAttribute("src", weatherIcon);
       img.style.display = "block";
 
